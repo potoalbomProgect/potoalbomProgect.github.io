@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poto albom</title>
+  <link href="sours/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="stiles/stiles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="sours/io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="sours/io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="sours/io/favicon-16x16.png">
+  <link rel="manifest" href="sours/io/site.webmanifest">
+  <link rel="stylesheet" href="stiles/bgvideo.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="nav">
+      <div class="bottom">
+        <nav class="labl">
+          <ul>
+            <li>
+              <a href="#"><img class="width" src="image/kot.png" alt=""></a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Семья</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Отдых</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Свадьба</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Дети</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Друзья</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Вк</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="hrt" href="#">Видео</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li id="next">
+
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="centr">
+        <h1>Фото альбом</h1>
+      </div>
+    </div>
+
+  </header>
+  <section>
+    <div class="sector">
+      <div class="left">
+        <p>На этом сайте вы найдете фотографии и видеозаписи нашей семьи!</p>
+      </div>
+      <div class="front">
+        <div class="foto">
+          <img src="image/poto.jpg" alt="">
+          <a class="text" href="poto.html">
+            <h3 class="hoverr">
+              Михаил и Лариса.
+            </h3>
+          </a>
+        </div>
+        <div class="ton">
+        </div>
+      </div>
+      <div class="riht">
+
+      </div>
+    </div>
+    <div id="app">
+      <input class="hrt" type="text":placeholder="inPoto" 
+                                    v-model="inValue" />
+      <button class="hrt" @click="entrPoto">{{entr}}</button>
+      <div class="potos">
+        <ul class="all-poto">
+
+          
+          <li v-for="(imagen,index) in images">
+            <a href="monitor.html"> <img :src=`image/${imagen}`>
+              <p class="idPoto">({{index}})    {{imagen}}</p>
+           </a>
+          </li> 
+          
+
+        </ul>
+      </div>
+    </div>
+
+    <!--div class="left-poto">
+        <video class="an" autoplay controls>
+          <source src="image/ann.MOV">
+          
+        </video>
+        <a class="anpoto" href="an.html">
+          Анна
+                  </a>
+
+      </div>
+    <div class=" front-poto">
+      <video class="ns" autoplay controls>
+        <source src="image/ns.mov">
+
+      </video>
+      
+
+       </div>
+       <div class="riht-poto">
+        <video class="sf" autoplay controls>
+          <source src="image/sf.mp4">
+         
+  
+        </video>
+        <a class="sfpoto" href="sof.html"> 
+          София
+        </a>
+       </div-->
+
+    </div>
+
+
+  </section>
+  <footer>
+
+  </footer>
+  <!--script src="https://unpkg.com/vue@3/dist/vue.global.js"></script-->
+  <script src="java/vue/unpkg/vue.global.js"></script>
+  <script src="./java/index.js"></script>
+</body>
+
+</html>
