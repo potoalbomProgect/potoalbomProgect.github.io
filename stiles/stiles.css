@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bad Script&display=swap');
 
 body {
+    overflow-x: hidden;
+    max-width: 100%;
     background-color: rgb(252, 215, 173);
 }
 
 .nav {
+    max-width: 100%;
     display: block;
 }
 
@@ -59,7 +62,8 @@ body {
     background-color: rgb(252, 215, 173);
     box-shadow: 6px 6px 5px 3px #a38989;
     border-radius: 25px;
-    ;
+    z-index: 100;
+    opacity: 0.7;
 
 
 }
@@ -132,15 +136,33 @@ body {
     text-decoration: none;
 }
 
-.text h3 {
+.text h1 {
+    justify-content: center;
     margin-top: 20px;
-    margin-left: 150px;
-    font-size: 50px;
+
+    font-size: 70px;
     font-family: Great Vibes;
-    color: rgb(105, 68, 31);
+    color: rgb(44, 30, 16);
 
 }
 
+.textTu h1 {
+    display: flex;
+    justify-content: center;
+
+    font-size: 70px;
+    font-family: Great Vibes;
+    color: rgb(27, 19, 11);
+
+}
+.hoverr{
+    position: relative;
+        margin-top: 20px;
+        
+       font-size: 80px;
+        font-family: Great Vibes;
+        color: rgb(44, 30, 16);
+}
 .hoverr:hover {
     color: rgb(83, 73, 63);
 }
@@ -156,28 +178,239 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     list-style-type: none;
 }
-.potos{
-    background-image: url('albom.jpg');
+
+.slide {
+    width: 100%;
+    background-image: url('image/albom.jpg');
     margin: 3%;
     border-radius: 1.5%;
 }
-.potos img{
+
+.slide img {
+    cursor: pointer;
     width: 90%;
-   margin-top: 5%;
+    margin-top: 5%;
     border-radius: 20px;
     border-style: solid;
     border-color: rgb(134, 91, 34);
-    
 }
- .opic{
-    color: rgb(222, 228, 233);
- }
- .idPoto{
-    color: rgb(221, 205, 186);
-    font-family: Lobster;
-   text-align: center;
 
- }
+.slide video {
+    cursor: pointer;
+    width: 90%;
+    margin-top: 5%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(134, 91, 34);
+}
+
+.slide video.activ {
+    position: fixed;
+    top: -7%;
+    left: 15%;
+    width: auto;
+    height: 87vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    display: flex;
+
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*.slide img.activ {
+    position: absolute;
+    left: 30%;
+    width: 45%;
+    margin-top: 5%;
+    border-radius: 20px;
+    border-style: solid;
+    
+    border-color: rgb(46, 28, 4);
+}*/
+.slide img.activ {
+    position: fixed;
+    top: -7%;
+    left: 20%;
+    width: auto;
+    height: 97vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    display: flex;
+
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#closeButton {
+    background-color: rgba(92, 88, 88, 0.6);
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+
+
+
+
+}
+
+.BottomClose {
+    display: block;
+}
+
+.BottomCloseV {
+    display: block;
+}
+
+
+.close-button {
+
+    background: none;
+    z-index: 6;
+    position: fixed;
+    top: 25px;
+    left: 21%;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    color: rgb(187, 27, 27);
+
+
+}
+
+.close-buttonV {
+
+    background: none;
+    z-index: 6;
+    position: fixed;
+    top: 25px;
+    left: 21%;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    color: rgb(187, 27, 27);
+
+
+}
+
+.close-button.activ {
+
+    background: none;
+    z-index: 4;
+    position: fixed;
+    top: 25px;
+    left: 21%;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    color: rgb(168, 56, 56);
+
+
+}
+
+
+.opic {
+    color: rgb(222, 228, 233);
+}
+
+.idPoto {
+    font-size: 30px;
+    color: bisque;
+    font-family: Lobster;
+    text-align: center;
+
+}
+
+.filtr {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.7;
+}
+
+/*.tape {
+
+    width: 400px;
+    z-index: 4;
+    position: fixed;
+    bottom: 25px;
+    left: 21%;
+    border-radius: 5%;
+    border-style: none;
+    box-shadow: 0 8px 10px rgba(238, 233, 233, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 18px;
+
+
+}
+
+.play {
+    width: 10%;
+    bottom: 40%;
+    position: absolute;
+    left: 3%;
+
+}
+
+.stop {
+    width: 10%;
+    bottom: 40%;
+    position: absolute;
+    left: 15%;
+
+}
+
+.progress {
+    bottom: 40%;
+    width: 50%;
+    position: absolute;
+    left: 30%;
+
+}
+
+.progressType {
+    bottom: 40%;
+    width: 50%;
+    position: absolute;
+    left: 30%;
+
+}
+.controlTime {
+    bottom: 40%;
+    width: 20%;
+    position: absolute;
+    left: 85%;
+    color: rgb(153, 153, 180);/*
+
+}
+
 /*.left-poto {
     width: 30%;
     display: block;
@@ -244,76 +477,193 @@ body {
     border-color: rgb(226, 173, 113);
     box-shadow: 10px 10px 5px 3px #a38989
 }*/
-
-@media(max-width: 900px) {
-    .bottom {
+@media(max-width: 500px) {
+    .foto img {
         position: relative;
-        width: 40%;
+        left: 30%;
 
+    }
+}
+
+
+@media(max-width: 912px) {
+    .bottom {
+        position: fixed;
+        width: 10%;
+        z-index: 1000;
+        left: -4%;
         flex-direction: column;
 
     }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 912px) {
+    .all-poto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style-type: none;
+
+    }
+}
+@media(max-width: 500px) {
     .all-poto {
         position: relative;
-       display: flex;
-       flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
     }
 }
-@media(max-width:500px) {
+
+
+@media(max-width:912px) {
     .hrt {
-        width: 120px;
+        font-size: 20px;
     }
 }
 
-@media(max-width:900px) {
+
+@media(max-width:912px) {
     .sector {
         display: block;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .left a {
         text-align: center;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .left {
         width: 100%;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .navbar {
         display: block;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .nav {
         display: flex;
         flex-direction: row;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .centr {
+        display: block;
         width: 50%;
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:912px) {
     .centr h1 {
+        top: 50%;
         padding-right: 40px;
     }
 }
 
-@media(max-width:900px) {
-    .foto img {
-        width: 450px;
+@media(max-width:500px) {
+    .slide img.activ {
+        position: fixed;
+        top: -1%;
+        left: 5%;
+        width: 86%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 3;
+        display: flex;
+        overflow-y: scroll;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+}
+
+@media(max-width:650px) {
+    .slide img.activ {
+        position: fixed;
+        top: -1%;
+        left: 5%;
+        width:auto;
+      height: 90%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 3;
+        display: flex;
+        
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+}
+@media(max-width:912px) {
+    .width {
+        position: absolute;
+        width: 50px;
+        height: auto;
+        left: 40%;
+        top: -1%;
+
+
+    }
+}
+@media(max-width:912px) {
+    .centr h1{
+        position: absolute;
+       left: 25%;
+        top:99%;        
+        font-size: 60px;
+
+    }
+}
+@media(max-width:912px) {
+    .centr {
+        display: block;
+        left: 60%;
+        top: 10%;
+        position: relative;
+     
+
+    }
+}
+
+@media(max-width:500px) {
+    .hoverr{
+      position: relative;
+       left: 90%;
+        white-space: nowrap;
+       font-size: 65px;
+        font-family: Great Vibes;
+        color: rgb(44, 30, 16);
+
+
+    }
+}
+
+@media(max-width:912px) {
+    body {
+        overflow-x: hidden;
+        background-color: rgb(185, 165, 142);
+    }
+
+
+}
+
+@media(max-width:912px) {
+    .slide {
+
+       width: 200% ;
+    }
+}
+
+@media(max-width: 500px) {
+    .left {
+        position: absolute;
+        left: 28%;
+        top: 2%;
     }
 }
