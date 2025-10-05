@@ -19,7 +19,7 @@
 <body>
 
   <header>
-
+   
     <div class="nav">
       <div class="bottom">
         <nav class="labl">
@@ -32,49 +32,49 @@
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Семья</a>
+              <a class="hrt" href="#">Наши фото</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Отдых</a>
+              <a class="hrt" href="#otdix">Отдых</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Свадьба</a>
+              <a class="hrt" href="#svadba">Свадьба</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Дети</a>
+              <a class="hrt" href="#Deti">Дети</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Друзья</a>
+              <a class="hrt" href="https://vk.com/unechskiy">вк М</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Вк</a>
+              <a class="hrt" href="https://vk.com/id134209036">вк Л</a>
             </li>
           </ul>
         </nav>
         <nav>
           <ul>
             <li>
-              <a class="hrt" href="#">Видео</a>
+              <a class="hrt" href="#Video">Видео</a>
             </li>
           </ul>
         </nav>
@@ -99,12 +99,12 @@
       </div>
       <div class="front">
         <div class="foto">
-          <img src="image/poto.jpg" alt="">
-          <a class="text" href="poto.html">
-            <h3 class="hoverr">
-              Михаил и Лариса.
-            </h3>
-          </a>
+          <img src="image/poto.jpg">
+          
+          <p class="hoverr">
+            Михаил и Лариса.
+          </p>
+         
         </div>
         <div class="ton">
         </div>
@@ -114,22 +114,93 @@
       </div>
     </div>
     <div id="app">
-      <input class="hrt" type="text":placeholder="inPoto" 
-                                    v-model="inValue" />
-      <button class="hrt" @click="entrPoto">{{entr}}</button>
-      <div class="potos">
+      <!--<input class="hrt" type="text" :placeholder="inPoto" v-on:input="pastePoto" />
+      <input class="hrt" type="text" :placeholder="desc" v-on:input="pastePotoDesc" />
+      <button class="hrt" @click="entrPoto">{{entr}}</button>-->
+      <div class="slide">
+        <div class="BottomClose" onclick="  offslide()"></div>
         <ul class="all-poto">
 
-          
-          <li v-for="(imagen,index) in images">
-            <a href="monitor.html"> <img :src=`image/${imagen}`>
-              <p class="idPoto">({{index}})    {{imagen}}</p>
-           </a>
-          </li> 
-          
 
+          <li class="ModalClose" onclick="Mclose()" v-for="imagen in images">
+
+            <img :src=`image/imageM&L/${imagen.fileName}`>
+            <p class="idPoto">{{imagen.fileDesc}}</p>
+
+          </li>
         </ul>
       </div>
+      <!--<input class="hrt" type="file" :placeholder="inPoto" v-on:input="pastePotoTu" />
+      <input class="hrt" type="text" :placeholder="desc" v-on:input="pastePotoDescTu" />
+      <button class="hrt" @click="entrPotoTu">{{entrTu}}</button>-->
+      <div class="textTu">
+        <h1 class="hoverr"><a name="svadba"></a>Свадьба</h1>
+      </div>
+      <div class="slide">
+        <div class="BottomClose" onclick="  offslide()"></div>
+        <ul class="all-poto">
+          <li class="ModalClose" onclick="Mclose()" v-for="imagen in imagesTu">
+            <img :src=`image/imageSV/${imagen.fileName}`>
+            <p class="idPoto">{{imagen.fileDesc}}</p>
+
+          </li>
+        </ul>
+      </div>
+      <!--<input class="hrt" type="file" :placeholder="inPoto" v-on:input="pastePotoThree" />
+      <input class="hrt" type="text" :placeholder="desc" v-on:input="pastePotoDescThree" />
+      <button class="hrt" @click="entrPotoThree">{{entrTu}}</button>-->
+      <div class="textTu">
+        <h1 class="hoverr"><a name="otdix"></a>Отдых</h1>
+      </div>
+      <div class="slide">
+        <div class="BottomClose" onclick="  offslide()"></div>
+        <ul class="all-poto">
+          <li class="ModalClose" onclick="Mclose()" v-for="imagen in imagesThree ">
+            <img :src=`image/imageMore/${imagen.fileName}`>
+            <p class="idPoto">{{imagen.fileDesc}}</p>
+
+          </li>
+        </ul>
+      </div>
+      <div class="textTu">
+        <h1 class="hoverr"><a name="Deti"></a>Дети</h1>
+      </div>
+      <div class="slide">
+        <div class="BottomClose" onclick=" offslide()"></div>
+        <ul class="all-poto">
+          <li class="ModalClose" onclick="Mclose()" v-for="imagen in imagesFour ">
+            <img :src=`image/imageMore/${imagen.fileName}`>
+            <p class="idPoto">{{imagen.fileDesc}}</p>
+
+          </li>
+        </ul>
+      </div>
+      <div class="textTu">
+        <h1 class="hoverr"><a name="Video"></a>Видео</h1>
+        
+     <!-- </div>
+      <div class="tape">
+        <img class="play">
+        <img class="stop" src="image/imageTape/stop.png">
+        <img class="progress" src="image/imageTape/progress.png">
+        <input type="range" class="progressType">
+        <div class="controlTime">00:00</div>
+        
+      </div>-->
+      
+      <div class="slide">
+        <div class="BottomCloseV" onclick="offslideV()"></div>
+        <ul class="all-poto">
+          <li class="ModalClose" onclick="McloseV()" v-for="imagen in imagesFive ">
+            <video class="video" controls :src=`video/${imagen.fileName}`></video>
+            <p class="idPoto">{{imagen.fileDesc}}</p>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="filtrClass">
+
     </div>
 
     <!--div class="left-poto">
@@ -170,7 +241,9 @@
   </footer>
   <!--script src="https://unpkg.com/vue@3/dist/vue.global.js"></script-->
   <script src="java/vue/unpkg/vue.global.js"></script>
-  <script src="./java/index.js"></script>
+  <script src="java/index.js"></script>
+  <script src="java/slide.js"></script>
+  <!-- <script src="java/filtr.js"></script>-->
 </body>
 
 </html>
