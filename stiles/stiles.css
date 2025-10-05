@@ -584,7 +584,7 @@ body {
 
 }
 
-@media(max-width:750px) {
+@media(max-width:850px) {
     .slide img.activ {
         position: fixed;
         top: -1%;
@@ -666,4 +666,5 @@ body {
         left: 28%;
         top: 2%;
     }
+
 }
