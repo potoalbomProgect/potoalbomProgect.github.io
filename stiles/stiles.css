@@ -477,10 +477,10 @@ body {
     border-color: rgb(226, 173, 113);
     box-shadow: 10px 10px 5px 3px #a38989
 }*/
-@media(max-width: 500px) {
+@media(max-width: 912px) {
     .foto img {
         position: relative;
-        left: 30%;
+        left: 100%;
 
     }
 }
@@ -505,7 +505,7 @@ body {
 
     }
 }
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .all-poto {
         position: relative;
         display: flex;
@@ -572,7 +572,7 @@ body {
         position: fixed;
         top: -1%;
         left: 5%;
-        width: 86%;
+        width: 85%;
         height: auto;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(10px);
@@ -584,7 +584,7 @@ body {
 
 }
 
-@media(max-width:850px) {
+@media(max-width:915px) {
     .slide img.activ {
         position: fixed;
         top: -1%;
@@ -631,7 +631,7 @@ body {
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:912px) {
     .hoverr{
       position: relative;
        left: 90%;
@@ -643,6 +643,7 @@ body {
 
     }
 }
+
 
 @media(max-width:912px) {
     body {
@@ -666,5 +667,11 @@ body {
         left: 28%;
         top: 2%;
     }
-
+}
+@media(max-width: 900px) {
+    .left {
+        position: absolute;
+        left: 50%;
+        top: 2%;
+    }
 }
