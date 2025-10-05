@@ -584,13 +584,13 @@ body {
 
 }
 
-@media(max-width:650px) {
+@media(max-width:750px) {
     .slide img.activ {
         position: fixed;
         top: -1%;
         left: 5%;
         width:auto;
-      height: 90%;
+      height: 60%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(10px);
         z-index: 3;
